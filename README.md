@@ -6,9 +6,9 @@ Quantitative sports analytics projects combining probabilistic modeling, statist
 
 ## Overview
 
-This repository serves as the formal, technical home for my sports analytics work. While my [X (Twitter)](https://x.com/) feed contains over 89+ visualizations and quick experiments (often found by searching "Here's" on my profile, a term highly correlated with my new ideas), this repo filters the signal from the noise.
+This repository contains formal documentation and code for selected sports analytics projects. Many originated as visualizations and threads posted to [X](https://x.com/search?q=from%3Asportsandmath1%20Here%27s&f=media) ([no login required](https://xcancel.com/search?q=from%3Asportsandmath1%20Here%27s)).
 
-Here, I focus on **major, reproducible projects**. I am rebuilding my most significant informal analyses into fully documented codebases, notebooks, and write-ups. The goal is to provide technical readers with deep dives into the methodology, code, and data engineering behind the charts.
+Projects here emphasize reproducibility, clear methodology, and technical depth.
 
 **Topics:** `python`, `data-science`, `sports-analytics`, `statistics`, `machine-learning`, `bayesian-statistics`
 
