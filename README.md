@@ -1,8 +1,13 @@
 # Sports and Math Projects
 
-Quantitative sports analytics projects combining probabilistic modeling, statistical inference, and data visualization. Includes win probability models, ranking systems, playoff simulations, and predictive analytics.
+Quantitative projects combining probabilistic modeling, statistical inference, and data visualization. Includes sports analytics (win probability models, ranking systems, playoff simulations), chess AI and analysis tools, and financial modeling.
+
+<details>
+<summary>📸 Project Showcase</summary>
 
 ![Project Showcase](assets/project_showcase.png)
+
+</details>
 
 ## Overview
 
@@ -10,13 +15,13 @@ This repository contains formal documentation and code for selected sports analy
 
 Projects here emphasize reproducibility, clear methodology, and technical depth.
 
-**Topics:** `python` `data-science` `sports-analytics` `statistics` `machine-learning` `bayesian-statistics`
+**Topics:** `python` `data-science` `sports-analytics` `chess` `finance` `statistics` `machine-learning` `bayesian-statistics` `transformers`
 
 ---
 
 ## 🏈 NFL Playoffs Odds Engine
 
-**[→ Try the Live App](https://nfl-playoff-odds-engine.vercel.app/)**
+**[→ Try the Live App](https://nfl-playoff-odds-engine.vercel.app/)** | **[LinkedIn Primer + Video Demo](https://www.linkedin.com/posts/chinmaykrishna_i-built-a-web-app-that-lets-you-play-what-if-activity-7418402538728759296-BUo8/)**
 
 A web app for reverse-engineering playoff odds—initially shipped within a week before the 2026 Playoffs. Takes 14 teams, enumerates all 2^13 = 8,192 bracket possibilities, and finds team strengths that best align with Super Bowl odds via KL divergence optimization.
 
@@ -117,6 +122,74 @@ Self-consistent Markov models using **time (1s resolution) + MOV** instead of fe
 - [Example 1](https://x.com/SportsandMath1/status/1778252615626727920)
 - [Example 2](https://x.com/SportsandMath1/status/1789006738819006916)
 - [Example 3](https://x.com/SportsandMath1/status/1792312529487597705)
+
+</details>
+
+---
+
+## ♟️ ChessLLM
+
+**[→ Play Against the Model](https://chess-llm-316391656470.us-central1.run.app/)** | **[LinkedIn Primer](https://www.linkedin.com/posts/chinmaykrishna_chessllm-what-a-50m-transformer-says-about-activity-7414315796530814976-_FoI)** | **[Full Writeup](https://chinmaysnotebook.substack.com/p/chessllm-what-a-50m-transformer-says)**
+
+A 50M parameter transformer trained to play chess. Play against two variants—Stockfish-trained and Lichess-trained—both performing at ~1600-2000 Lichess level.
+
+**Key Features:**
+- Full visibility into probability distributions over moves (key differentiator from traditional bots—LLMs lack entropy)
+- Adjustable parameters like temperature
+- Analysis Board and LLM vs LLM mode
+
+<details>
+<summary>🔮 Future Ideas (v2)</summary>
+
+- Adaptive strength adjustment
+- Fine-tuned versions to match specific player styles
+- Mechanistic interpretability: visualize "why" it chose each move and "how" it represents board state internally
+
+</details>
+
+---
+
+## ♟️ Chess Game Analyzer
+
+**[→ Try the Live App](https://chess-improvement.vercel.app/)**
+
+*Find your worst collapses and best comebacks.*
+
+Enter a Lichess username to analyze your games using Lichess's Stockfish evaluations. Originally built to replay games before you collapsed—to improve closing out winning positions.
+
+**Key Features:**
+- **Worst losses** and **best comebacks** based on win probability swings
+- **Most exciting games** ranked by total probability change
+- Per-move-phase analysis showing where you win/lose games (opening, middle, endgame)
+- Multiple loss functions: Brier score (squared error), Log Loss (cross-entropy), and binary loss (lead changes only)
+- Filters by result, color, and time control
+
+<details>
+<summary>🔮 Future Ideas</summary>
+
+- Custom win probability model using state-space (Markov) approach
+- Incorporate time remaining (critical in bullet), whose turn, rating differentials
+- More granular phase breakdowns
+
+</details>
+
+---
+
+## 📈 Leverage Optimizer
+
+*Coming Soon*
+
+Analyzes stock volatility through the lens of hypothetical leveraged returns (rebalanced daily). Shows optimal leverage multipliers based on Kelly criterion.
+
+**Key Insight:** Stocks like GOOGL, NVDA, MSFT have optimal leverage in the 2-3x range—meaning 1x is conservative. A volatile stock like TSLA (~9% annual returns) has optimal leverage of ~0.75x—you'd be better off holding 25% in cash. If a stock's optimal leverage exceeds 1, you should theoretically take a loan to buy more; if it's below 1, hold cash instead.
+
+<details>
+<summary>📊 How It Works</summary>
+
+- Computes geometric mean returns across leverage multipliers
+- Optimal leverage corresponds to full Kelly criterion
+- Half-Kelly (~75% returns, ~50% risk) means look for stocks with optimal leverage > 2
+- Future: add risk-free rate input to properly price hypothetical loans
 
 </details>
 
