@@ -175,9 +175,9 @@ Enter a Lichess username to analyze your games using Lichess's Stockfish evaluat
 
 ---
 
-## 📈 Leverage Optimizer
+## 📈 Stock Historical Analysis
 
-*Coming Soon*
+**[→ Try the Live App](https://market-primer.vercel.app/)**
 
 Analyzes stock volatility through the lens of hypothetical leveraged returns (rebalanced daily). Shows optimal leverage multipliers based on Kelly criterion.
 
