@@ -175,7 +175,7 @@ Enter a Lichess username to analyze your games using Lichess's Stockfish evaluat
 
 ---
 
-## 📈 Stock Historical Analysis
+## 📈 Leverage Optimizer
 
 **[→ Try the Live App](https://market-primer.vercel.app/)**
 
@@ -189,7 +189,7 @@ Analyzes stock volatility through the lens of hypothetical leveraged returns (re
 - Computes geometric mean returns across leverage multipliers
 - Optimal leverage corresponds to full Kelly criterion
 - Half-Kelly (~75% returns, ~50% risk) means look for stocks with optimal leverage > 2
-- Future: add risk-free rate input to properly price hypothetical loans
+- Includes a configurable risk-free rate input to model borrowing costs
 
 </details>
 
